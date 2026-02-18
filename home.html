@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MICA - Apoio contra o Câncer</title>
+  <link rel="icon" type="image/png" href="uploads/LOGO MICA.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style/Home/home.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo"><i class="fas fa-hand-holding-heart"></i> MICA</h1>
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="nav" id="mainNav">
+      <a href="sobre.html"><i class="fa fa-address-card" aria-hidden="true"></i> Sobre</a>
+      <a href="chatbot.html"><i class="fas fa-robot"></i> Assistente MICA</a>
+      <a href="perfil.php"><i class="fa fa-user" aria-hidden="true"></i> Perfil</a>
+      <a href="configuraçoes.php"><i class="fa fa-cog"></i> Configurações</a>
+      <a class= danger href="php/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Seu apoio inteligente na luta contra o câncer</h2>
+    <p>Acompanhamento, informação e suporte humano e tecnológico em cada etapa.</p>
+    <a href="chatbot.html" class="btn">Falar com o Assistente <i class="fas fa-comments"></i></a>
+  </section>
+
+  <section id="sobre" class="section">
+    <h2>Sobre o Assistente</h2>
+    <p>O Assistente MICA é um projeto que oferece apoio emocional, informações confiáveis e soluções digitais para pacientes e familiares na luta contra o câncer.</p>
+    <div>
+      <a href="sobre.html" class="btn">Mais informações <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section id="apoio" class="section">
+    <h2>Nossos Serviços</h2>
+    <div class="services">
+      <div class="card">
+        <i class="fas fa-user-md"></i>
+        <h3>Acompanhamento personalizado</h3>
+      </div>
+      <div class="card">
+        <i class="fas fa-robot"></i>
+        <h3>Assistente para dúvidas rápidas</h3>
+      </div>
+      <div class="card">
+        <i class="fas fa-book"></i>
+        <h3>Conteúdo informativo</h3>
+      </div>
+      <div class="card">
+        <i class="fas fa-hands-helping"></i>
+        <h3>Espaço de apoio psicológico</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="chatbot" class="section">
+    <h2>Assistente Virtual</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="Robô" class="chatbot-img">
+    <p>Converse com nosso Assistente e tire suas dúvidas de forma rápida e fácil.</p>
+    <a href="chatbot.html" class="btn">Abrir Assistente <i class="fas fa-comment-dots"></i></a>
+  </section>
+
+  <section id="contato" class="section">
+    <h2>Contato</h2>
+    <p>Email: contato@assistente.com | Telefone: (00) 0000-0000</p>
+    <div class="services">
+      <div class="card">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>contato@assistente.com</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-phone"></i>
+        <h3>Telefone</h3>
+        <p>(00) 0000-0000</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Localização</h3>
+        <p>São Paulo, Brasil</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>MICA © 2025 - Todos os direitos reservados</p>
+  </footer>
+
+  <div class="floating-chatbot-btn" id="floatingChatbotBtn">
+    <i class="fas fa-comment"></i>
+  </div>
+
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <div class="chatbot-widget" id="chatbotWidget">
+    <div class="chat-header">
+      <span>Assistente MICA</span>
+      <button class="close-btn" id="closeChatbot">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="chat-body" id="chatBody">
+      <div class="message bot-message">
+        Olá! Sou o MICA, seu assistente virtual. Como posso ajudar você hoje?
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="userInput" placeholder="Digite sua mensagem...">
+      <button id="sendMessage">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/home.js"></script>
+</body>
+</html>

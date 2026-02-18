@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Signup Form</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="uploads/LOGO MICA.png">
+    <link rel="stylesheet" href="style/login/login.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box login">
+        <form
+          id="loginForm"
+          action="../Projeto Mica/php/validar.php"
+          method="POST"
+          autocomplete="off"
+        >
+          <h1>Login</h1>
+          <div class="input-box">
+            <input
+              type="text"
+              id="loginUsername"
+              name="nome"
+              placeholder="Seu Nome"
+              required
+            />
+            <i class="bx bxs-user"></i> 
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              id="loginPassword"
+              name="senha"
+              placeholder="Sua Senha"
+              required
+            />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <div class="forgot-link">
+            <a href="#">Esqueceu a senha?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <p>Conecte-se com</p>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-google"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <form
+          id="registerForm"
+          action="../Projeto Mica/php/cadastro.php"
+          method="post"
+          autocomplete="off"
+          enctype="multipart/form-data"
+        >
+          <h1>Registrar</h1>
+          <div class="input-box">
+            <input type="text" name="nome" placeholder="Seu Nome" required />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <i class="bx bxs-envelope"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              name="senha"
+              placeholder="Senha"
+              required
+            />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="file"
+              id="imagem_pfp"
+              name="imagem_pfp"
+              accept="image/*"
+              style="padding: 10px; background: #eee; border-radius: 8px;"
+            />
+            <i class="bx bxs-image"></i>
+          </div>
+          <button type="submit" class="btn">Registrar</button>
+          <p>Registre-se com</p>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-google"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="toggle-box">
+        <div class="toggle-panel toggle-left">
+          <h1>Bem vindo de volta <br> A MICA! </h1>
+          <p>Não tem uma conta?</p>
+          <button class="btn register-btn">Registre-se</button>
+        </div>
+
+        <div class="toggle-panel toggle-right">
+          <h1>Bem vindo <br> A MICA!</h1>
+          <p>Ja possui uma conta?</p>
+          <button class="btn login-btn">Login</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/login.js"></script>
+
+  </body>
+</html>

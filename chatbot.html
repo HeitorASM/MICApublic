@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente Virtual - Poweríon</title>
+    <link rel="icon" type="image/png" href="uploads/LOGO MICA.png">
+    <link rel="stylesheet" href="style/chatbot/chatbot_adicional.css">
+    <link rel="stylesheet" href="style/chatbot/chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-placeholder">
+           <h1 class="logo"><i class="fas fa-hand-holding-heart"></i> MICA</h1>
+        </div>
+        <nav>
+            <ul>
+        <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="sobre.html"><i class="fa fa-address-card"></i> Sobre</a></li>
+        <li><a href="chatbot.html"><i class="fas fa-robot"></i> Assistente MICA</a></li>
+        <li><a href="perfil.php"><i class="fa fa-user" aria-hidden="true"></i> Perfil</a></li>
+        <li><a href="configuraçoes.php"><i class="fa fa-cog"></i> Configurações</a></li>
+        <li><a class= danger href="php/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="chatbot-container">
+        <section class="chatbot-header">
+            <div class="chatbot-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chatbot-info">
+                <h1>Assistente Virtual - MICA</h1>
+                <p>Posso te ajudar com informações sobre quedas de energia, previsões e mais.</p>
+                <div class="chatbot-status">
+                    <span class="status-online"><i class="fas fa-circle"></i> Online</span>
+                </div>
+                <div id="api-status" class="api-error"></div>
+            </div>
+        </section>
+
+        <section class="chatbot-content">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>Olá! Sou o assistente virtual MCIA. Como posso te ajudar hoje?</p>
+                    </div>
+                    <div class="message-time" id="initial-message-time">14:30</div>
+                </div>
+                
+                <div class="typing-indicator" id="typing-indicator">
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Digite sua mensagem..." autocomplete="off">
+                <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                <button id="mic-btn"><i class="fas fa-microphone"></i></button>
+            </div>
+
+            <div class="quick-questions">
+                <h3>Perguntas comuns <i class="fas fa-user-friends"></i> :</h3>
+                <div class="quick-questions-container" id="quick-questions-container">
+                </div>
+            </div>
+        </section>
+
+        <section class="chatbot-help">
+            <h2>Posso te ajudar com:</h2>
+            <div class="help-topics">
+                <div class="help-topic">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Informações sobre saúde</h3>
+                    <p>Forneço orientações sobre prevenção, sintomas e cuidados com a saúde</p>
+                </div>
+                <div class="help-topic">
+                    <i class="fas fa-clock"></i>
+                    <h3>Pesquisas médicas</h3>
+                    <p>Posso fazer pesquisas complexas de forma rápida e resumida</p>
+                </div>
+                <div class="help-topic">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Prevenção de doenças</h3>
+                    <p>Posso gerar um guia personalizado de como prevenir diferentes tipos de câncer</p>
+                </div>
+                <div class="help-topic">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Lembretes de medicamentos</h3>
+                    <p>Posso ajudar a gerenciar sua medicação com lembretes personalizados</p>
+                </div>
+                <div class="help-topic">
+                    <i class="fas fa-book-medical"></i>
+                    <h3>Terminologia médica</h3>
+                    <p>Explico termos e conceitos médicos de forma simples e compreensível</p>
+                </div>
+            </div>
+            <br>
+        </section>
+    </main>
+    <script src="private/responseFormatter.js"></script>
+    <script src="private/chatbot.js"></script>
+</body>
+</html>
